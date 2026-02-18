@@ -4,6 +4,7 @@ import { auth } from '@/lib/auth';
 import { initTRPC, TRPCError } from '@trpc/server';
 import { count, eq } from 'drizzle-orm';
 import { headers } from 'next/headers';
+import { initTRPC } from '@trpc/server';
 import { cache } from 'react';
 export const createTRPCContext = cache(async () => {
   /**
@@ -56,3 +57,4 @@ export const premiumProcedure = (entity: "meetings" | "agents") =>
 
     return next({ ctx: { ...ctx } });
   });
+export const baseProcedure = t.procedure;

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next";
 
 import { Toaster } from "@/components/ui/sonner";
+
 import { TRPCReactProvider } from "@/trpc/client";
 
 import "./globals.css";
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <NuqsAdapter>
       <TRPCReactProvider>
+    <TRPCReactProvider>
         <html lang="en">
           <body
             className={`${inter.className} antialiased`}
